@@ -1,11 +1,15 @@
 import { Route, Routes } from "react-router-dom"
-import TodoInput from "./components/todos/TodoInput"
-import Counter from "./components/Counter"
+import {Main,Counter,
+        Navigation,TodoInput} from "./components"
 
 const App = () => {
-  return (<><Routes>
-  <Route exact path="/" element={<Counter/>}></Route>
-  <Route exact path="/todos" element={<TodoInput/>}></Route>
+  return (<>
+  <Navigation/>
+  <Routes>
+  <Route path="/*" element={<Main/>}></Route>
+  <Route path="/home" element={<Main/>}></Route>
+  <Route path="/counter" element={<Counter/>}></Route>
+  <Route path="/todos/*" element={<TodoInput/>}></Route>
   </Routes></>)
 }
 
