@@ -1,6 +1,17 @@
 const TodoList = () => {
     return (<>
-        <h3>할 일 목록</h3>
+    <h2>할일 목록</h2>
+    <table>
+      <tr>
+        <th>Todo List</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+      </tr>
+    </table>
     </>)
 }
 
