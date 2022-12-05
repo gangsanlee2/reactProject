@@ -1,4 +1,5 @@
-import { Navigation, Footer, Counter, TodoInput} from "../components"
+import { Navigation, Footer, Counter, SignUp, Login} from "../components"
+import { Schedule } from "../containers"
 import { Route, Routes } from "react-router-dom"
 
 const Home = () => {
@@ -14,7 +15,9 @@ const Home = () => {
                 <td style={{ width: "100%", border: "1px solid black"}}>
                 <Routes>
                     <Route path="/counter" element={<Counter/>}></Route>
-                    <Route path="/todos/*" element={<TodoInput/>}></Route>
+                    <Route path="/todos/" element={<Schedule/>}></Route>
+                    <Route path="/signup" element={<SignUp/>}></Route>
+                    <Route path="/login/" element={<Login/>}></Route>
                 </Routes>
                 </td>
             </tr>

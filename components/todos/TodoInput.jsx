@@ -1,18 +1,20 @@
 import { useState } from "react"
-import todoReducer from "../../store/todo.reducer"
+import { addTodoAction } from "../../store/todo.reducer"
 import { useDispatch } from "react-redux"
+import { v4 as uuidv4 } from 'uuid'
+
 
 const TodoInput = () => {
-    const [toto, setTodo] = useState('')
+    const [todo, setTodo] = useState('')
     const dispatch = useDispatch()
     const submitForm = e => {
         e.preventDefault()                  // 바닐라스크립트 방지
         const newTodo = {
             id : uuidv4(),
-            name : todoReducer,
+            name : todo,
             complete : false
         }
-        addTodo(new newTodo)
+        addTodo(newTodo)
         setTodo('')
     }
     const addTodo = todo => dispatch(addTodoAction(todo))
@@ -24,7 +26,7 @@ const TodoInput = () => {
     return(<>
     <h2>스케줄러</h2>
     <form onSubmit={submitForm} method='POST'>
-        <label htmlfor="todo">할 일:</label><br/>
+        <label htmlFor="todo">할 일:</label><br/>
         <input 
             type="text" 
             id="todo" 
