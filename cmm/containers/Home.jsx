@@ -1,10 +1,10 @@
 import { Navigation2, Footer, Counter} from "cmm"
 import {Schedule} from "cop"
 import { Route, Routes } from "react-router-dom"
-import { Login, SignUp } from "uat"
+import { LoginForm, SignUp } from "uat"
 import image from 'images/fashion.png'
 import { Stroke } from "blog"
-import { Iris } from "shop"
+import { IrisForm } from "shop"
 
 const Home = () => {
     const imageSize = {Width: 700, Height: 500}
@@ -22,9 +22,9 @@ const Home = () => {
                     <Route path="/counter" element={<Counter/>}></Route>
                     <Route path="/todos/" element={<Schedule/>}></Route>
                     <Route path="/signup" element={<SignUp/>}></Route>
-                    <Route path="/login" element={<Login/>}></Route>
+                    <Route path="/login" element={<LoginForm/>}></Route>
                     <Route path="/stroke" element={<Stroke/>}></Route>
-                    <Route path="/iris" element={<Iris/>}></Route>
+                    <Route path="/iris" element={<IrisForm/>}></Route>
                 </Routes>
                 </td>
             </tr>
