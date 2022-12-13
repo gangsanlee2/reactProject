@@ -1,4 +1,4 @@
-import { Home } from "./containers"
+import { Home } from "cmm"
 
 const App = () => {
   return (<>
