@@ -5,6 +5,7 @@ import { LoginForm, SignUp } from "uat"
 import image from 'images/fashion.png'
 import { Stroke } from "blog"
 import { IrisForm } from "shop"
+import { FashionForm } from "dlearn"
 
 const Home = () => {
     const imageSize = {Width: 700, Height: 500}
@@ -25,6 +26,7 @@ const Home = () => {
                     <Route path="/login" element={<LoginForm/>}></Route>
                     <Route path="/stroke" element={<Stroke/>}></Route>
                     <Route path="/iris" element={<IrisForm/>}></Route>
+                    <Route path="/fashion" element={<FashionForm/>}></Route>
                 </Routes>
                 </td>
             </tr>

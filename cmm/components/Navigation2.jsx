@@ -26,6 +26,7 @@ const Navigation2 = () => {
         <Link to="/login" style={{width:70, margin:10}}>로그인</Link>
         <Link to="/stroke" style={{width:70, margin:10}}>뇌졸중</Link>
         <Link to="/iris" style={{width:70, margin:10}}>아이리스</Link>
+        <Link to="/fashion" style={{width:70, margin:10}}>패션</Link>
       </BottomNavigation>
     </Box>
   );
