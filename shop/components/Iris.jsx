@@ -16,8 +16,9 @@ const Iris = () => {
         alert(`꽃잎,받침 길이/너비 : ${JSON.stringify(request)}`)
         iris(request)
         .then((res)=>{
-            console.log(`Response is ${res.config.data}`)
-            localStorage.setItem('token', JSON.stringify(res.config.data))
+            console.log(`Response is ${res.data.result}`)
+            localStorage.setItem('token', JSON.stringify(res.data.result))
+            alert(`찾는 품종 : ${JSON.stringify(res.data.result)}`)
         })
         .catch((err)=>{
             console.log(err)
