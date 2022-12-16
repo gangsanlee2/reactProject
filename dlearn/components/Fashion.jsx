@@ -38,15 +38,10 @@ const Fashion = () => {
         })
     }
     
-    return(
-    <>  <form method="get">
+    return(<>
         번호 선택: <input type="text" name="id" onChange={onChange} /><br/>
         <button onClick={onGetClick}> GET 입력 </button><br/>
-        </form>
-        <form method="post">
-        번호 선택: <input type="text" name="id" onChange={onChange} /><br/>
         <button onClick={onPostClick}> POST 입력 </button>
-        </form>
     </>)
 }
 export default Fashion
