@@ -5,7 +5,8 @@ import { LoginForm, SignUp } from "uat"
 import image from 'images/fashion.png'
 import { Stroke } from "blog"
 import { IrisForm } from "shop"
-import { FashionForm } from "dlearn"
+import { FashionForm, Number } from "dlearn"
+import { NaverMovie } from "webcrawler"
 
 const Home = () => {
     const imageSize = {Width: 700, Height: 500}
@@ -27,6 +28,8 @@ const Home = () => {
                     <Route path="/stroke" element={<Stroke/>}></Route>
                     <Route path="/iris" element={<IrisForm/>}></Route>
                     <Route path="/fashion" element={<FashionForm/>}></Route>
+                    <Route path="/number" element={<Number/>}></Route>
+                    <Route path="/naver-movie" element={<NaverMovie/>}></Route>
                 </Routes>
                 </td>
             </tr>

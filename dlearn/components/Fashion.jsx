@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getFashion, postFashion } from "dlearn/api";
+import dlearnService from "dlearn/api";
 
 const Fashion = () => {
     const [inputs, setInputs] = useState({})
@@ -12,6 +12,7 @@ const Fashion = () => {
     }
     const onGetClick = e => {
         e.preventDefault()
+        /*        
         alert(`선택한 번호 : ${JSON.stringify(id)}`)
         getFashion(id)
         .then((res)=>{
@@ -21,9 +22,14 @@ const Fashion = () => {
             console.log(err)
             alert('번호를 다시 입력해주세요')
         })
+        */
+        dlearnService.getFashion(id)
+        let arr = document.getElementsByClassName('box')
+        for(let i=0; i<arr.length; i++) arr[i].value = ""
     }
     const onPostClick = e => {
         e.preventDefault()
+        /*
         const request = {id}
         alert(`선택한 번호 : ${JSON.stringify(request)}`)
         postFashion(request)
@@ -36,12 +42,25 @@ const Fashion = () => {
             console.log(err)
             alert('번호를 다시 입력해주세요')
         })
+        */
+       dlearnService.postFashion(id)
+       let arr = document.getElementsByClassName('box')
+       for(let i=0; i<arr.length; i++) arr[i].value = ""
     }
     
     return(<>
-        번호 선택: <input type="text" name="id" onChange={onChange} /><br/>
-        <button onClick={onGetClick}> GET 입력 </button><br/>
-        <button onClick={onPostClick}> POST 입력 </button>
+    <form method="get">
+        <h1>FASHION GET방식</h1>
+        <p>카테고리를 알고 싶은 옷의 번호를 입력해주세요.</p>
+        <input type="text" className="box" placeholder="테스트할 옷 번호" name="id" onChange={onChange}/>
+        <button onClick={onGetClick}>옷의 카테고리 찾기</button>
+    </form>
+    <form method="post">
+        <h1>FASHION POST방식</h1>
+        <p>카테고리를 알고 싶은 옷의 번호를 입력해주세요.</p>
+        <input type="text" className="box" placeholder="테스트할 옷 번호" name="id" onChange={onChange}/>
+        <button onClick={onPostClick}>옷의 카테고리 찾기</button>
+    </form>
     </>)
 }
 export default Fashion

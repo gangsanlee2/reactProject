@@ -27,6 +27,8 @@ const Navigation2 = () => {
         <Link to="/stroke" style={{width:70, margin:10}}>뇌졸중</Link>
         <Link to="/iris" style={{width:70, margin:10}}>아이리스</Link>
         <Link to="/fashion" style={{width:70, margin:10}}>패션</Link>
+        <Link to="/number" style={{width:70, margin:10}}>손글씨</Link>
+        <Link to="/naver-movie" style={{width:70, margin:10}}>네이버 영화</Link>
       </BottomNavigation>
     </Box>
   );
