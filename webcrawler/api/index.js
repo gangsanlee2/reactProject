@@ -18,11 +18,14 @@ function handleResponse(response){
         })
     }
 async function crawler(){
-    fetch(`${server}/webcrawler/naver-movie`)
+    const res = await fetch(`${server}/webcrawler/naver-movie`)
     .then(handleResponse)
-    .then(data => {
-        alert('결과: '+JSON.stringify(data))
-    })
+    .then(data => JSON.stringify(data))
+    .catch((error) => {
+        alert('error :::: '+error);
+    });
+    
+    return Promise.resolve(res);
 } 
 
 export default crawlerService
