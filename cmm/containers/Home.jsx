@@ -7,6 +7,7 @@ import { Stroke } from "blog"
 import { IrisForm } from "shop"
 import { FashionForm, Number } from "dlearn"
 import { NaverMovie } from "webcrawler"
+import SamsungReport from "nlp/components/SamsungReport"
 
 const Home = () => {
     const imageSize = {Width: 700, Height: 500}
@@ -30,6 +31,7 @@ const Home = () => {
                     <Route path="/fashion" element={<FashionForm/>}></Route>
                     <Route path="/number" element={<Number/>}></Route>
                     <Route path="/naver-movie" element={<NaverMovie/>}></Route>
+                    <Route path="/samsung-report" element={<SamsungReport/>}></Route>
                 </Routes>
                 </td>
             </tr>

@@ -29,6 +29,7 @@ const Navigation2 = () => {
         <Link to="/fashion" style={{width:70, margin:10}}>패션</Link>
         <Link to="/number" style={{width:70, margin:10}}>손글씨</Link>
         <Link to="/naver-movie" style={{width:70, margin:10}}>네이버 영화</Link>
+        <Link to="/samsung-report" style={{width:70, margin:10}}>삼성 보고서</Link>
       </BottomNavigation>
     </Box>
   );

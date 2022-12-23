@@ -1,0 +1,1 @@
+export {default as SamsungReport} from 'nlp/conponents/SamsungReport'
