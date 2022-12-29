@@ -1,6 +1,6 @@
 import axios from "axios";
 const server = `http://localhost:8000`
-export const userLogin = req => axios.post(`${server}/blog/b_users/login`, req)
+export const userLogin = req => axios.post(`${server}/security/users//login`, req)
 
 const uatService = {
     signup
