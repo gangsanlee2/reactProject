@@ -2,7 +2,7 @@ import 'uat/styles/Login.css'
 import { useState } from 'react'
 import { userLogin } from 'uat/api'
 
-const Login = () => {
+export default function LoginForm(){
     const [inputs, setInputs] = useState({})
     const {email, password} = inputs;
 
@@ -33,4 +33,3 @@ const Login = () => {
         <button onClick={onClick}> 로그인 </button>
     </>
 )}
-export default Login

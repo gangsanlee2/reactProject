@@ -1,6 +1,6 @@
 const server = `http://localhost:8000`
 const nlpService = {
-    nlp
+    report, review, handleResponse
 }
 function handleResponse(response){ 
     return response.text()
@@ -17,8 +17,8 @@ function handleResponse(response){
             return data
         })
     }
-async function nlp(){
-    const res = await fetch(`${server}/nlp/samsung-report`)
+async function report(){
+    const res = await fetch(`${server}/basic/nlp/samsung-report`)
     .then(handleResponse)
     .then(data => JSON.stringify(data))
     .catch((error) => {
@@ -27,5 +27,18 @@ async function nlp(){
     
     return Promise.resolve(res);
 } 
-
+async function review(inhalt){
+    const requestOption = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(inhalt)
+    }
+    const res = await fetch(`${server}/basic/nlp/naver-movie-review`, requestOption)
+    .then(handleResponse)
+    .then(data => (JSON.stringify(data)))
+    .catch((error) => {
+        alert('error :::: '+error);
+    });
+    return Promise.resolve(res);
+}
 export default nlpService

@@ -1,6 +1,6 @@
 import axios from "axios";
 const server = `http://localhost:8000`
-export const userLogin = req => axios.post(`${server}/blog/auth/login`, req)
+export const userLogin = req => axios.post(`${server}/blog/b_users/login`, req)
 
 const uatService = {
     signup
@@ -21,7 +21,7 @@ function handleResponse(response){
         })
     }
 async function signup(){
-    fetch(`${server}/blog/auth/signup`)
+    fetch(`${server}/blog/b_users/signup`)
     .then(handleResponse)
     .then(data => {
         alert('결과: '+JSON.stringify(data))

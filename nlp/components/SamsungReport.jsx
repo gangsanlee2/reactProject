@@ -7,7 +7,7 @@ const SamsungReport = () => {
 
     const onClick = e => {
         e.preventDefault()
-        nlpService.nlp().then(res => {
+        nlpService.report().then(res => {
             const json = JSON.parse(res)
             setInput(json['result'])
         })

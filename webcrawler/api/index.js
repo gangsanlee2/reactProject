@@ -18,7 +18,7 @@ function handleResponse(response){
         })
     }
 async function crawler(){
-    const res = await fetch(`${server}/webcrawler/naver-movie`)
+    const res = await fetch(`${server}/basic/webcrawler/naver-movie`)
     .then(handleResponse)
     .then(data => JSON.stringify(data))
     .catch((error) => {

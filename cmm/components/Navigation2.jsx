@@ -1,10 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Link } from "react-router-dom"
 
 const Navigation2 = () => {
@@ -30,6 +26,8 @@ const Navigation2 = () => {
         <Link to="/number" style={{width:70, margin:10}}>손글씨</Link>
         <Link to="/naver-movie" style={{width:70, margin:10}}>네이버 영화</Link>
         <Link to="/samsung-report" style={{width:70, margin:10}}>삼성 보고서</Link>
+        <Link to="/naver-movie-review" style={{width:70, margin:10}}>네이버 영화 리뷰</Link>
+        <Link to="/user-list" style={{width:70, margin:10}}>사용자목록</Link>
       </BottomNavigation>
     </Box>
   );

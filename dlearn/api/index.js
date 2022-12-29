@@ -30,7 +30,7 @@ async function postFashion(id){
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(id)
     }
-    fetch(`${server}/dlearn/fashion`, requestOption)
+    fetch(`${server}/basic/dlearn/fashion`, requestOption)
     .then(handleResponse)
     .then(data => {
         alert('결과: '+JSON.stringify(data))
@@ -40,7 +40,7 @@ async function postFashion(id){
     });
 }
 async function getFashion(id){
-    fetch(`${server}/dlearn/fashion?id=${id}`)
+    fetch(`${server}/basic/dlearn/fashion?id=${id}`)
     .then(handleResponse)
     .then(data => {
         alert('결과: '+JSON.stringify(data))
@@ -53,7 +53,7 @@ async function postNumber(id){
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(id)
     }
-    fetch(`${server}/dlearn/number`, requestOption)
+    fetch(`${server}/basic/mnist-number/number`, requestOption)
     .then(handleResponse)
     .then(data => {
         alert('결과: '+JSON.stringify(data))
@@ -63,7 +63,7 @@ async function postNumber(id){
     });
 }
 async function getNumber(id){
-    fetch(`${server}/dlearn/number?id=${id}`)
+    fetch(`${server}/basic/mnist-number/number?id=${id}`)
     .then(handleResponse)
     .then(data => {
         alert('결과: '+JSON.stringify(data))
